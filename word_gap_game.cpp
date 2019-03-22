@@ -14,7 +14,7 @@ bool check_word(string word);
 void run_game();
 int currentScore = -1;
 
-main() {
+int main() {
 
   /*************************/
   /* set up the dictionary */
@@ -31,8 +31,6 @@ main() {
     dictionary.push_back(word);
   }
   cout << "Welcome to the word-gap game!! " << endl;
-  //  cout << "by the way max random is " << RAND_MAX << endl;
-  //  srand(time(0));
 
   /*********************************************************************/
   /* set up a vector of 10 test words randomly chosen from the dictionary */
@@ -62,7 +60,6 @@ main() {
 }
 
 bool check_word(string word) {
-  //TODO: done
   for(unsigned int i=0; i < dictionary.size(); i++) {
     if(dictionary[i] == word) {
       return true;
@@ -73,7 +70,6 @@ bool check_word(string word) {
 
 void run_game() {
    vector<string> test_words;
-  //TODO: done
   for(int i = 0; i < 10; i++) {
     // pick random source;
     string source;
@@ -88,7 +84,7 @@ void run_game() {
   /********************************************************************************/
 
   int score = 0;
-  //TODO: done
+
   for(int i = 0; i < 10; i++) {
     string testword;
     testword = test_words[i];
@@ -117,16 +113,10 @@ void run_game() {
   if(prevScore!=-1)
     {
       if(prevScore > currentScore)
-	{
-	  cout << "You did worse :)" << endl;
-	}
+	       cout << "You did worse :)" << endl;
       else if(prevScore < currentScore)
-	{
-	  cout << "You did better >_<" << endl;
-	}
+	       cout << "You did better >_<" << endl;
       else
-	{
-	  cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
-	}
+	       cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
     }
 }
