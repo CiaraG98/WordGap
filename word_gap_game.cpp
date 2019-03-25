@@ -15,16 +15,17 @@ void run_game();
 int highScore = 0;
 void run_game(int wordSize);
 void game_choice();
-
+int wordSize= 0;
+ifstream the_words;
 
 int main() {
 
   /*************************/
   /* set up the dictionary */
   /*************************/
-  cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
-  int wordSize= 0;
-  ifstream the_words;
+  //cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
+
+  /*
   string input;
   cin >> input;
   if (input == "word")
@@ -50,6 +51,7 @@ int main() {
   while(the_words >> word) {
     dictionary.push_back(word);
   }
+  */
   cout << "Welcome to the word-gap game!! " << endl;
 
   /*********************************************************************/
@@ -59,6 +61,7 @@ int main() {
   bool continueGame = true;
   while(continueGame)
   {
+    game_choice();
     cout << "High score: " << highScore << endl;
     run_game(wordSize);
     cout << "Do you want to play again? (y or n)" << endl;
@@ -89,6 +92,32 @@ bool check_word(string word) {
 }
 
 void game_choice() {
+  cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
+  string input;
+  cin >> input;
+  if (input == "word")
+  {
+    the_words.open("length3words");
+    wordSize = 3;
+  }
+  else if (input == "verb")
+  {
+      the_words.open("length4verbs");
+      wordSize = 4;
+  }
+  else {
+    cout << "not a valid response... ending program\n";
+    exit(1);
+  }
+  if (!the_words) {
+    cout << "There was a problem opening the file\n";
+    exit(1);
+  }
+
+  string word;
+  while(the_words >> word) {
+    dictionary.push_back(word);
+  }
 
 }
 
