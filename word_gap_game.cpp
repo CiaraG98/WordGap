@@ -11,6 +11,7 @@ vector<string> dictionaryThree;
 
 bool check_word(string word);
 void run_game();
+void run_verb_game(vector<string> test_words);
 int highScore = 0;
 void run_game();
 void game_choice();
@@ -83,7 +84,10 @@ void game_choice() {
 
 }
 
+void run_verb_game(vector<string> test_words)
+{
 
+}
 void run_game() {
    vector<string> test_words;
   for(int i = 0; i < 10; i++) {
@@ -92,24 +96,30 @@ void run_game() {
     source = current[rand() % current.size()];
     test_words.push_back(source);
   }
-
   int score = 0;
-  for(int i = 0; i < 10; i++) {
-    string testword;
-    testword = test_words[i];
-    int word_pos;
-    word_pos = rand() % testword.size(); // so 0 1 2
-    testword[word_pos] = '_';
-    char c;
-    cout << "fill the gap in: " << testword << endl;
-    cin >> c;
-    testword[word_pos] = c;
-    if(check_word(testword)) {
-      cout << "Valid answer\n";
-      score++;
-    }
-    else {
-      cout << "Invalid answer\n";
+  if(current==dictionaryVerbs)
+  {
+    run_verb_game(test_words);
+  }
+  else
+  {
+    for(int i = 0; i < 10; i++) {
+      string testword;
+      testword = test_words[i];
+      int word_pos;
+      word_pos = rand() % testword.size(); // so 0 1 2
+      testword[word_pos] = '_';
+      char c;
+      cout << "fill the gap in: " << testword << endl;
+      cin >> c;
+      testword[word_pos] = c;
+      if(check_word(testword)) {
+        cout << "Valid answer\n";
+        score++;
+      }
+      else {
+        cout << "Invalid answer\n";
+      }
     }
   }
   cout << "you got " << score << " right\n";
