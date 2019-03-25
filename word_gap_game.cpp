@@ -111,7 +111,7 @@ void run_game(int wordSize) {
     // ask for fill and see if a possible word
     // add to running score;
     int word_pos;
-    word_pos = rand() % wordSize; // so 0 1 2
+    word_pos = rand() % testword.size(); // so 0 1 2
     testword[word_pos] = '_';
     char c;
     cout << "fill the gap in: " << testword << endl;
@@ -136,4 +136,5 @@ void run_game(int wordSize) {
     else
       cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
 
+      test_words.clear();
 }
