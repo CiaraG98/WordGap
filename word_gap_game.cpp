@@ -53,8 +53,6 @@ int main() {
     }
     the_words.close();
   }
-  // end of game
-
 }
 
 
@@ -96,7 +94,6 @@ void run_game(int wordSize) {
     // pick random source;
     string source;
     source = current[rand() % current.size()];
-    //    cout << "source is: " << source << endl;
     test_words.push_back(source);
   }
 
