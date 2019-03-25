@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<string> dictionaryVerbs; // global var so visible to check_word(..) and main(..)
+vector<string> dictionaryVerbs;
 vector<string> dictionaryThree;
 
 bool check_word(string word);
@@ -57,6 +57,7 @@ int main() {
 
 }
 
+
 bool check_word(string word) {
   for(unsigned int i = 0; i < current.size(); i++) {
     if(current[i] == word) {
@@ -65,6 +66,7 @@ bool check_word(string word) {
   }
   return false;
 }
+
 
 void game_choice() {
   cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
@@ -87,6 +89,7 @@ void game_choice() {
 
 }
 
+
 void run_game(int wordSize) {
    vector<string> test_words;
   for(int i = 0; i < 10; i++) {
@@ -97,20 +100,10 @@ void run_game(int wordSize) {
     test_words.push_back(source);
   }
 
-  /********************************************************************************/
-  /* go thru these blanking one letter and asking for it to be filled,            */
-  /* and for each check presence in dictionary keeping                      score */
-  /********************************************************************************/
-
   int score = 0;
-
   for(int i = 0; i < 10; i++) {
     string testword;
     testword = test_words[i];
-    // pick position
-    // blank it
-    // ask for fill and see if a possible word
-    // add to running score;
     int word_pos;
     word_pos = rand() % testword.size(); // so 0 1 2
     testword[word_pos] = '_';
