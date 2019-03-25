@@ -30,7 +30,7 @@ int main() {
   the_words.open("length4verbs");
   while(the_words >> word) {
     dictionaryVerbs.push_back(word);
-
+}
   cout << "Welcome to the word-gap game!! " << endl;
 
   bool continueGame = true;
