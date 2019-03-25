@@ -76,7 +76,7 @@ int main() {
       cout << "invalid input... ending game" << endl;
       continueGame = false;
     }
-
+    the_words.close();
   }
   // end of game
 
