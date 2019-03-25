@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 vector<string> dictionaryVerbs; // global var so visible to check_word(..) and main(..)
 vector<string> dictionaryThree;
 
@@ -31,45 +30,9 @@ int main() {
   the_words.open("length4verbs");
   while(the_words >> word) {
     dictionaryVerbs.push_back(word);
-  }
-  /*************************/
-  /* set up the dictionary */
-  /*************************/
-  //cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
 
-  /*
-  string input;
-  cin >> input;
-  if (input == "word")
-  {
-    the_words.open("length3words");
-    wordSize = 3;
-  }
-  else if (input == "verb")
-  {
-      the_words.open("length4verbs");
-      wordSize = 4;
-  }
-  else {
-    cout << "not a valid response... ending program\n";
-    exit(1);
-  }
-  if (!the_words) {
-    cout << "There was a problem opening the file\n";
-    exit(1);
-  }
-
-  string word;
-  while(the_words >> word) {
-    dictionary.push_back(word);
-  }
-  */
   cout << "Welcome to the word-gap game!! " << endl;
 
-  /*********************************************************************/
-  /* set up a vector of 10 test words randomly chosen from the dictionary */
-  /*********************************************************************/
-  // start game
   bool continueGame = true;
   while(continueGame)
   {
