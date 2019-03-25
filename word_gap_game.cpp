@@ -4,12 +4,9 @@
 #include <vector>
 #include <stdlib.h>
 #include <time.h>
-
 using namespace std;
 
-
 vector<string> dictionary;
-
 bool check_word(string word);
 void run_game();
 int highScore = 0;
@@ -86,7 +83,7 @@ void game_choice() {
 }
 
 void run_game(int wordSize) {
-   vector<string> test_words;
+  vector<string> test_words;
   for(int i = 0; i < 10; i++) {
     // pick random source;
     string source;
