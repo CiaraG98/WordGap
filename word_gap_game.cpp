@@ -13,9 +13,8 @@ vector<string> dictionaryThree;
 bool check_word(string word);
 void run_game();
 int highScore = 0;
-void run_game(int wordSize);
+void run_game();
 void game_choice();
-int wordSize= 0;
 ifstream the_words;
 vector<string> current;
 
@@ -38,7 +37,7 @@ int main() {
   {
     game_choice();
     cout << "High score: " << highScore << endl;
-    run_game(wordSize);
+    run_game();
     cout << "Do you want to play again? (y or n)" << endl;
     string playAgain;
     cin >> playAgain;
@@ -73,12 +72,10 @@ void game_choice() {
   if (input == "word")
   {
     current = dictionaryThree;
-    wordSize = 3;
   }
   else if (input == "verb")
   {
       current = dictionaryVerbs;
-      wordSize = 4;
   }
   else {
     cout << "not a valid response... ending program\n";
@@ -88,7 +85,7 @@ void game_choice() {
 }
 
 
-void run_game(int wordSize) {
+void run_game() {
    vector<string> test_words;
   for(int i = 0; i < 10; i++) {
     // pick random source;
