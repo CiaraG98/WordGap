@@ -6,7 +6,9 @@
 #include <time.h>
 using namespace std;
 
-vector<string> dictionary;
+vector<string> dictionaryVerbs; // global var so visible to check_word(..) and main(..)
+vector<string> dictionaryThree;
+
 bool check_word(string word);
 void run_game();
 int highScore = 0;
@@ -14,8 +16,19 @@ void run_game(int wordSize);
 void game_choice();
 int wordSize= 0;
 ifstream the_words;
+vector<string> current;
 
 int main() {
+
+  the_words.open("length3words");
+  string word;
+  while(the_words >> word) {
+    dictionaryThree.push_back(word);
+  }
+  the_words.close();
+  the_words.open("length4verbs");
+  while(the_words >> word) {
+    dictionaryVerbs.push_back(word);
 
   cout << "Welcome to the word-gap game!! " << endl;
 
@@ -44,8 +57,8 @@ int main() {
 }
 
 bool check_word(string word) {
-  for(unsigned int i = 0; i < dictionary.size(); i++) {
-    if(dictionary[i] == word) {
+  for(unsigned int i = 0; i < current.size(); i++) {
+    if(current[i] == word) {
       return true;
     }
   }
@@ -58,26 +71,17 @@ void game_choice() {
   cin >> input;
   if (input == "word")
   {
-    the_words.open("length3words");
+    current = dictionaryThree;
     wordSize = 3;
   }
   else if (input == "verb")
   {
-      the_words.open("length4verbs");
+      current = dictionaryVerbs;
       wordSize = 4;
   }
   else {
     cout << "not a valid response... ending program\n";
     exit(1);
-  }
-  if (!the_words) {
-    cout << "There was a problem opening the file\n";
-    exit(1);
-  }
-
-  string word;
-  while(the_words >> word) {
-    dictionary.push_back(word);
   }
 
 }
@@ -87,7 +91,7 @@ void run_game(int wordSize) {
   for(int i = 0; i < 10; i++) {
     // pick random source;
     string source;
-    source = dictionary[rand() % dictionary.size()];
+    source = current[rand() % current.size()];
     //    cout << "source is: " << source << endl;
     test_words.push_back(source);
   }
