@@ -119,11 +119,11 @@ void run_game(int wordSize) {
     cin >> c;
     testword[word_pos] = c;
     if(check_word(testword)) {
-      cout << "yep reckon " << testword << " is possible\n";
+      cout << "Valid answer\n";
       score++;
     }
     else {
-      cout << "nope reckon " << testword << " is not possible\n";
+      cout << "Invalid answer\n";
     }
   }
   cout << "you got " << score << " right\n";
