@@ -13,16 +13,35 @@ vector<string> dictionary; // global var so visible to check_word(..) and main(.
 bool check_word(string word);
 void run_game();
 int highScore = 0;
+void run_game(int wordSize);
+
 
 int main() {
 
   /*************************/
   /* set up the dictionary */
   /*************************/
+  cout << "Would you like to play the word game or the verb game? ('word' or 'verb')\n";
+  int wordSize= 0;
   ifstream the_words;
-  the_words.open("length3words");
+  string input;
+  cin >> input;
+  if(input=="word")
+  {
+    the_words.open("length3words");
+    wordSize = 3;
+  }
+  else if(input == "verb")
+  {
+      the_words.open("length4verbs");
+      wordSize = 4;
+  }
+  else{
+    cout << "not a valid response... ending program\n";
+    exit(1);
+  }
   if(!the_words) {
-    cout << "prob opening words\n";
+    cout << "prob opening file\n";
     exit(1);
   }
 
@@ -52,6 +71,20 @@ int main() {
     {
       cout << "invalid input... ending game" << endl;
       continueGame = false;
+      run_game(wordSize);
+      cout << "Do you want to play again? (y or n)" << endl;
+      string playAgain;
+      cin >> playAgain;
+      if(playAgain=="n")
+	{
+	  continueGame=false;
+	}
+      else if(playAgain!="y")
+	{
+	  cout << "invalid input... ending game" << endl;
+	  continueGame = false;
+	}
+
     }
 
   }
@@ -69,8 +102,9 @@ bool check_word(string word) {
   return false;
 }
 
-void run_game() {
-  vector<string> test_words;
+
+void run_game(int wordSize) {
+   vector<string> test_words;
   for(int i = 0; i < 10; i++) {
     // pick random source;
     string source;
@@ -94,7 +128,7 @@ void run_game() {
     // ask for fill and see if a possible word
     // add to running score;
     int word_pos;
-    word_pos = rand() % 3; // so 0 1 2
+    word_pos = rand() % wordSize; // so 0 1 2
     testword[word_pos] = '_';
     char c;
     cout << "fill the gap in: " << testword << endl;
