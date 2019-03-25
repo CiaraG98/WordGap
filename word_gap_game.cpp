@@ -20,13 +20,13 @@ vector<string> current;
 
 int main() {
 
-  the_words.open("length3words");
+  the_words.open("words");
   string word;
   while(the_words >> word) {
     dictionaryThree.push_back(word);
   }
   the_words.close();
-  the_words.open("length4verbs");
+  the_words.open("verbs");
   while(the_words >> word) {
     dictionaryVerbs.push_back(word);
   }
@@ -52,8 +52,6 @@ int main() {
     }
     the_words.close();
   }
-  // end of game
-
 }
 
 
@@ -95,7 +93,6 @@ void run_game(int wordSize) {
     // pick random source;
     string source;
     source = current[rand() % current.size()];
-    //    cout << "source is: " << source << endl;
     test_words.push_back(source);
   }
 
