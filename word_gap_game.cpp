@@ -14,6 +14,7 @@ bool check_word(string word);
 void run_game();
 int highScore = 0;
 void run_game(int wordSize);
+void game_choice();
 
 
 int main() {
@@ -26,22 +27,22 @@ int main() {
   ifstream the_words;
   string input;
   cin >> input;
-  if(input=="word")
+  if (input == "word")
   {
     the_words.open("length3words");
     wordSize = 3;
   }
-  else if(input == "verb")
+  else if (input == "verb")
   {
       the_words.open("length4verbs");
       wordSize = 4;
   }
-  else{
+  else {
     cout << "not a valid response... ending program\n";
     exit(1);
   }
-  if(!the_words) {
-    cout << "prob opening file\n";
+  if (!the_words) {
+    cout << "There was a problem opening the file\n";
     exit(1);
   }
 
@@ -58,8 +59,8 @@ int main() {
   bool continueGame = true;
   while(continueGame)
   {
-    cout << "Current high score: " << highScore << endl;
-    run_game();
+    cout << "High score: " << highScore << endl;
+    run_game(wordSize);
     cout << "Do you want to play again? (y or n)" << endl;
     string playAgain;
     cin >> playAgain;
@@ -71,25 +72,10 @@ int main() {
     {
       cout << "invalid input... ending game" << endl;
       continueGame = false;
-      run_game(wordSize);
-      cout << "Do you want to play again? (y or n)" << endl;
-      string playAgain;
-      cin >> playAgain;
-      if(playAgain=="n")
-	{
-	  continueGame=false;
-	}
-      else if(playAgain!="y")
-	{
-	  cout << "invalid input... ending game" << endl;
-	  continueGame = false;
-	}
-
     }
 
   }
   // end of game
-
 
 }
 
@@ -102,6 +88,9 @@ bool check_word(string word) {
   return false;
 }
 
+void game_choice() {
+
+}
 
 void run_game(int wordSize) {
    vector<string> test_words;
