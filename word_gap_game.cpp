@@ -7,7 +7,9 @@
 using namespace std;
 
 vector<string> dictionaryVerbs;
-vector<string> dictionaryThree;
+vector<string> dictionaryEnglish;
+vector<string> dictionarySpanish;
+vector<string> dictionaryGerman;
 
 bool check_word(string word);
 void run_game();
@@ -23,13 +25,27 @@ int main() {
   the_words.open("words");
   string word;
   while(the_words >> word) {
-    dictionaryThree.push_back(word);
+    dictionaryEnglish.push_back(word);
   }
   the_words.close();
+
   the_words.open("verbs");
   while(the_words >> word) {
     dictionaryVerbs.push_back(word);
   }
+  the_words.close();
+
+  the_words.open("spanish_words");
+  while(the_words >> word) {
+    dictionarySpanish.push_back(word);
+  }
+  the_words.close();
+
+  the_words.open("german_words");
+  while(the_words >> word) {
+    dictionaryGerman.push_back(word);
+  }
+  the_words.close();
   cout << "Welcome to the word-gap game!! " << endl;
 
   bool continueGame = true;
@@ -71,7 +87,21 @@ void game_choice() {
   cin >> input;
   if (input == "word")
   {
-    current = dictionaryThree;
+    cout << "Would you like to play this in 'spanish', 'english', or 'german'?\n";
+    string language;
+    cin >> language;
+    if(language=="spanish")
+    {
+      current = dictionarySpanish;
+    }
+    else if(language=="english")
+    {
+      current = dictionaryEnglish;
+    }
+    else if(language=="german")
+    {
+      current = dictionaryGerman;
+    }
   }
   else if (input == "verb")
   {
@@ -103,10 +133,19 @@ int run_verb_game(vector<string> test_words)
     int word_pos;
     word_pos = rand() % conjugation.size(); // so 0 1 2
     conjugation[word_pos] = '_';
-    char c;
     cout << "The verb is " << verb << endl;
     cout << "Fill in the gap:" << person << " " << conjugation << endl;
-    cin >> c;
+    char c;
+    string input;
+    cin >> input;
+    if(input.length()==1)
+    {
+      c = input[0];
+    }
+    else
+    {
+      c = -1;
+    }
     conjugation[word_pos] = c;
     if(conjugation==current.substr(personPos+1)) {
       cout << "Valid answer\n";
@@ -119,9 +158,8 @@ int run_verb_game(vector<string> test_words)
   return score;
 }
 void run_game() {
-   vector<string> test_words;
+  vector<string> test_words;
   for(int i = 0; i < 10; i++) {
-    // pick random source;
     string source;
     source = current[rand() % current.size()];
     test_words.push_back(source);
@@ -139,9 +177,18 @@ void run_game() {
       int word_pos;
       word_pos = rand() % testword.size(); // so 0 1 2
       testword[word_pos] = '_';
+      string input;
       char c;
       cout << "fill the gap in: " << testword << endl;
-      cin >> c;
+      cin >> input;
+      if(input.length()==1)
+      {
+        c = input[0];
+      }
+      else
+      {
+        c = -1;
+      }
       testword[word_pos] = c;
       if(check_word(testword)) {
         cout << "Valid answer\n";
