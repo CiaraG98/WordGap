@@ -12,7 +12,7 @@ vector<string> dictionary; // global var so visible to check_word(..) and main(.
 
 bool check_word(string word);
 void run_game();
-int currentScore = -1;
+int highScore = 0;
 
 int main() {
 
@@ -38,29 +38,30 @@ int main() {
   // start game
   bool continueGame = true;
   while(continueGame)
+  {
+    cout << "Current high score: " << highScore << endl;
+    run_game();
+    cout << "Do you want to play again? (y or n)" << endl;
+    string playAgain;
+    cin >> playAgain;
+    if (playAgain == "n")
     {
-      run_game();
-      cout << "Do you want to play again? (y or n)" << endl;
-      string playAgain;
-      cin >> playAgain;
-      if(playAgain=="n")
-	{
-	  continueGame=false;
-	}
-      else if(playAgain!="y")
-	{
-	  cout << "invalid input... ending game" << endl;
-	  continueGame = false;
-	}
-
+      continueGame = false;
     }
+    else if (playAgain != "y")
+    {
+      cout << "invalid input... ending game" << endl;
+      continueGame = false;
+    }
+
+  }
   // end of game
 
 
 }
 
 bool check_word(string word) {
-  for(unsigned int i=0; i < dictionary.size(); i++) {
+  for(unsigned int i = 0; i < dictionary.size(); i++) {
     if(dictionary[i] == word) {
       return true;
     }
@@ -69,7 +70,7 @@ bool check_word(string word) {
 }
 
 void run_game() {
-   vector<string> test_words;
+  vector<string> test_words;
   for(int i = 0; i < 10; i++) {
     // pick random source;
     string source;
@@ -108,15 +109,14 @@ void run_game() {
     }
   }
   cout << "you got " << score << " right\n";
-  int prevScore = currentScore;
-  currentScore = score;
-  if(prevScore!=-1)
-    {
-      if(prevScore > currentScore)
-	       cout << "You did worse :)" << endl;
-      else if(prevScore < currentScore)
-	       cout << "You did better >_<" << endl;
-      else
-	       cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
+
+    if(score > highScore) {
+      cout << "You did better >_<" << endl;
+      highScore = score;
     }
+    else if(score < highScore)
+      cout << "You did worse :)" << endl;
+    else
+      cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
+
 }
