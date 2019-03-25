@@ -137,4 +137,5 @@ void run_game(int wordSize) {
     else
       cout << "You made no improvement...  but didn't do worse either! ay!" << endl;
 
+      test_words.clear();
 }
