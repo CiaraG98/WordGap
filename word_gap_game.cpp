@@ -108,8 +108,9 @@ void game_choice() {
       current = dictionaryVerbs;
   }
   else {
-    cout << "not a valid response... ending program\n";
-    exit(1);
+    cout << "not a valid response...try again\n";
+    game_choice();
+    //exit(1);
   }
 
 }
