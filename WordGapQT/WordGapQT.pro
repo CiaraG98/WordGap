@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-03-29T11:28:34
+# Project created by QtCreator 2019-03-29T11:38:41
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = thing
+TARGET = WordGapQT
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
