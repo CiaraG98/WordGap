@@ -1,10 +1,6 @@
 #-------------------------------------------------
 #
-<<<<<<< HEAD
-# Project created by QtCreator 2019-03-29T11:21:55
-=======
-# Project created by QtCreator 2019-03-29T11:20:49
->>>>>>> 962a4f464dc4e061e20c60242296c72ed0ceb421
+# Project created by QtCreator 2019-03-29T11:38:41
 #
 #-------------------------------------------------
 
@@ -12,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = word_gap_game
+TARGET = WordGapQT
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
