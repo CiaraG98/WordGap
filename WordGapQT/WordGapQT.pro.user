@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD:thing/thing.pro.user
+<!-- Written by QtCreator 4.8.2, 2019-03-29T11:42:16. -->
+=======
 <!-- Written by QtCreator 4.8.2, 2019-03-29T11:38:42. -->
+>>>>>>> 79f4d9f32212eca874b5284c36bd9cc6dab17546:WordGapQT/WordGapQT.pro.user
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
