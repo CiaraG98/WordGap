@@ -6,10 +6,13 @@
 #include <time.h>
 using namespace std;
 
-vector<string> dictionaryVerbs;
+vector<string> dictionaryFrenchVerbs;
+vector<string> dictionaryGermanVerbs;
+vector<string> dictionarySpanishVerbs;
 vector<string> dictionaryEnglish;
 vector<string> dictionarySpanish;
 vector<string> dictionaryGerman;
+vector<string> dictionaryFrench;
 
 bool check_word(string word);
 void run_game();
@@ -22,22 +25,40 @@ vector<string> current;
 
 int main() {
 
-  the_words.open("words");
+  the_words.open("english_words");
   string word;
   while(the_words >> word) {
     dictionaryEnglish.push_back(word);
   }
   the_words.close();
 
-  the_words.open("verbs");
+  the_words.open("french_verbs");
   while(the_words >> word) {
-    dictionaryVerbs.push_back(word);
+    dictionaryFrenchVerbs.push_back(word);
+  }
+  the_words.close();
+
+  the_words.open("german_verbs");
+  while(the_words >> word) {
+    dictionaryGermanVerbs.push_back(word);
+  }
+  the_words.close();
+
+  the_words.open("spanish_verbs");
+  while(the_words >> word) {
+    dictionarySpanishVerbs.push_back(word);
   }
   the_words.close();
 
   the_words.open("spanish_words");
   while(the_words >> word) {
     dictionarySpanish.push_back(word);
+  }
+  the_words.close();
+
+  the_words.open("english_words");
+  while(the_words >> word) {
+    dictionaryEnglish.push_back(word);
   }
   the_words.close();
 
@@ -87,12 +108,16 @@ void game_choice() {
   cin >> input;
   if (input == "word")
   {
-    cout << "Would you like to play this in 'spanish', 'english', or 'german'?\n";
+    cout << "Would you like to play this in 'spanish', 'english', 'french', or 'german'?\n";
     string language;
     cin >> language;
     if(language=="spanish")
     {
       current = dictionarySpanish;
+    }
+    else if(language=="french")
+    {
+      current = dictionaryFrench;
     }
     else if(language=="english")
     {
@@ -105,7 +130,21 @@ void game_choice() {
   }
   else if (input == "verb")
   {
-      current = dictionaryVerbs;
+    cout << "Would you like to play this in 'spanish', 'french', or 'german'?\n";
+    string language;
+    cin >> language;
+    if(language=="spanish")
+    {
+      current = dictionarySpanishVerbs;
+    }
+    else if(language=="french")
+    {
+      current = dictionaryFrenchVerbs;
+    }
+    else if(language=="german")
+    {
+      current = dictionaryGermanVerbs;
+    }
   }
   else {
     cout << "not a valid response...try again\n";
@@ -166,7 +205,7 @@ void run_game() {
     test_words.push_back(source);
   }
   int score = 0;
-  if(current==dictionaryVerbs)
+  if(current==dictionaryFrenchVerbs ||current==dictionaryGermanVerbs || current==dictionarySpanishVerbs)
   {
     score = run_verb_game(test_words);
   }
