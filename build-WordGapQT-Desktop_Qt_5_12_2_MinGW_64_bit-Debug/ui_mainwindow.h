@@ -17,6 +17,8 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -29,8 +31,11 @@ public:
     QWidget *formLayoutWidget;
     QFormLayout *formLayout;
     QPushButton *pushButton;
-    QPushButton *pushButton_2;
     QComboBox *comboBox;
+    QPushButton *pushButton_2;
+    QTextBrowser *textBrowser;
+    QTextEdit *textEdit;
+    QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -44,7 +49,7 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         formLayoutWidget = new QWidget(centralWidget);
         formLayoutWidget->setObjectName(QString::fromUtf8("formLayoutWidget"));
-        formLayoutWidget->setGeometry(QRect(59, 29, 241, 121));
+        formLayoutWidget->setGeometry(QRect(59, 29, 241, 154));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
@@ -55,19 +60,33 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, pushButton);
 
-        pushButton_2 = new QPushButton(formLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-
-        formLayout->setWidget(1, QFormLayout::LabelRole, pushButton_2);
-
         comboBox = new QComboBox(formLayoutWidget);
-        comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, comboBox);
+
+        pushButton_2 = new QPushButton(formLayoutWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, pushButton_2);
+
+        textBrowser = new QTextBrowser(formLayoutWidget);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+
+        formLayout->setWidget(2, QFormLayout::LabelRole, textBrowser);
+
+        textEdit = new QTextEdit(formLayoutWidget);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, textEdit);
+
+        pushButton_3 = new QPushButton(formLayoutWidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, pushButton_3);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -89,13 +108,23 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_2->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        comboBox->setItemText(0, QApplication::translate("MainWindow", "Language", nullptr));
-        comboBox->setItemText(1, QApplication::translate("MainWindow", "French", nullptr));
-        comboBox->setItemText(2, QApplication::translate("MainWindow", "Spanish", nullptr));
-        comboBox->setItemText(3, QApplication::translate("MainWindow", "German", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "Word Game", nullptr));
+        comboBox->setItemText(0, QApplication::translate("MainWindow", "French", nullptr));
+        comboBox->setItemText(1, QApplication::translate("MainWindow", "Spanish", nullptr));
+        comboBox->setItemText(2, QApplication::translate("MainWindow", "German", nullptr));
 
+        pushButton_2->setText(QApplication::translate("MainWindow", "Verb Game", nullptr));
+        textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Displays stuff</p></body></html>", nullptr));
+        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Input stuff here</p></body></html>", nullptr));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Submit Input", nullptr));
     } // retranslateUi
 
 };
