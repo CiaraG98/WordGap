@@ -4,13 +4,13 @@ no steps made so far
 -- if there's technical things you puzzling over, what are they?
 The QT/Hex stuff, maybe?
 
--- if you have some hopes for stages through which the thing might go, 
+-- if you have some hopes for stages through which the thing might go,
 what are they?
 *keep a score between games
 *increased no. of blanks as increased hardness
 (this can work as the player will have been working with the
 same dictionary of words each time, so it won't be too impossible?)
-*could give the user a word in english and a the, for example, 
+*could give the user a word in english and a the, for example,
 french translation of the word with a no. of blanks that you have to
 guess so it's like a new-french-word-learning game using word gaps
 *or, given a verb with last few letters blank & 'present conditional'
@@ -20,3 +20,5 @@ game they want to play, e.g. translations or verb inflections
 probably use two different dictionaries, one for verbs, one for not-verbs
 and hence two different vector<string> variables. Which vector depends
 on which button pressed?
+
+machen/ich/mache
