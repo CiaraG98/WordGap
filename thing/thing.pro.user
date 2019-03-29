@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<<<<<<< HEAD
-<!-- Written by QtCreator 4.8.2, 2019-03-29T11:55:46. -->
-<qtcreator>
- <data>
-  <variable>EnvironmentId</variable>
-  <value type="QByteArray">{7c355167-f7d1-4431-9651-920a7a6cdba5}</value>
-=======
 <!-- Written by QtCreator 4.8.2, 2019-03-29T11:55:07. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
   <value type="QByteArray">{e8e3d1e8-e4b1-4df1-ba17-2257589160a3}</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -79,11 +71,7 @@
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-<<<<<<< HEAD
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Ciara Gilsenan/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/build-thing-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -139,11 +127,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-<<<<<<< HEAD
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Ciara Gilsenan/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Release</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Release</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/build-thing-Desktop_Qt_5_12_2_MinGW_64_bit-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -199,11 +183,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
-<<<<<<< HEAD
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/Ciara Gilsenan/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Profile</value>
-=======
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Profile</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">C:/Users/35389/Documents/GitHub/build-thing-Desktop_Qt_5_12_2_MinGW_64_bit-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -315,14 +295,10 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">WordGapQT</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">thing</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-<<<<<<< HEAD
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Ciara Gilsenan/Documents/GitHub/WordGap/WordGapQT/WordGapQT.pro</value>
-=======
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/35389/Documents/GitHub/WordGap/WordGapQT/WordGapQT.pro</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
-    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">WordGapQT.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/35389/Documents/GitHub/WordGap/thing/thing.pro</value>
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">thing.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
@@ -332,11 +308,7 @@
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-<<<<<<< HEAD
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/Ciara Gilsenan/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
-=======
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/35389/Documents/GitHub/WordGap/build-WordGapQT-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
->>>>>>> d318222f0aa175cfae2404795e25641419959041
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">C:/Users/35389/Documents/GitHub/build-thing-Desktop_Qt_5_12_2_MinGW_64_bit-Debug</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>
