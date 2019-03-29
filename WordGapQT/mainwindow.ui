@@ -42,11 +42,6 @@
       <widget class="QComboBox" name="comboBox">
        <item>
         <property name="text">
-         <string>Language</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
          <string>French</string>
         </property>
        </item>
