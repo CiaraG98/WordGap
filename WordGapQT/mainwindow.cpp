@@ -15,11 +15,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_wordButton_clicked()
 {
-  
+  ui->textBrowser->setText("Welcome to Word Gap!");
 }
 
 void MainWindow::on_verbButton_clicked()
 {
+    ui->textBrowser->setText("Welcome to the verb game!");
 
 }
 
