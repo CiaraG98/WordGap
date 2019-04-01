@@ -20,7 +20,7 @@ private slots:
 
     void on_verbButton_clicked();
 
-    void on_submiyButton_clicked();
+    void on_submitButton_clicked();
 
 private:
     Ui::MainWindow *ui;
