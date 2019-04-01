@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_wordButton_clicked()
 {
-
+  
 }
 
 void MainWindow::on_verbButton_clicked()
